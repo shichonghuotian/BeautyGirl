@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02E54C78A538FEFB4577F52E /* Pods_BeautyGirl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A91C938095D3DDF674A915C /* Pods_BeautyGirl.framework */; };
+		18386964208CB77B00809FA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18386963208CB77B00809FA6 /* AppDelegate.m */; };
+		1838696C208CB77B00809FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1838696B208CB77B00809FA6 /* Assets.xcassets */; };
+		1838696F208CB77B00809FA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1838696D208CB77B00809FA6 /* LaunchScreen.storyboard */; };
+		18386972208CB77B00809FA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18386971208CB77B00809FA6 /* main.m */; };
+		185E40FC208E0A9500E56ACD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E40FB208E0A9500E56ACD /* BaseViewController.m */; };
+		185E40FF208E0D9600E56ACD /* BasePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E40FE208E0D9600E56ACD /* BasePresenter.m */; };
+		185E4107208E0EE600E56ACD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E4106208E0EE600E56ACD /* MainViewController.m */; };
+		185E410A208E0F0600E56ACD /* MainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E4109208E0F0600E56ACD /* MainPresenter.m */; };
+		185E410E208E142300E56ACD /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E410D208E142300E56ACD /* ApiManager.m */; };
+		185E4112208E173000E56ACD /* GankGirlBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E4111208E173000E56ACD /* GankGirlBody.m */; };
+		185E4115208E17A800E56ACD /* GankGirlResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E4114208E17A800E56ACD /* GankGirlResult.m */; };
+		185E411B208E1B2100E56ACD /* GankGirlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E411A208E1B2100E56ACD /* GankGirlModel.m */; };
+		185E411E208E255F00E56ACD /* CardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E411D208E255F00E56ACD /* CardTableViewCell.m */; };
+		185E4121208E2AE200E56ACD /* NetRequst.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E4120208E2AE200E56ACD /* NetRequst.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1838695F208CB77B00809FA6 /* BeautyGirl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyGirl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18386962208CB77B00809FA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18386963208CB77B00809FA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1838696B208CB77B00809FA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1838696E208CB77B00809FA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18386970208CB77B00809FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18386971208CB77B00809FA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		185E40F9208E01B000E56ACD /* IMVPView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMVPView.h; sourceTree = "<group>"; };
+		185E40FA208E0A9500E56ACD /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		185E40FB208E0A9500E56ACD /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		185E40FD208E0D9600E56ACD /* BasePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePresenter.h; sourceTree = "<group>"; };
+		185E40FE208E0D9600E56ACD /* BasePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePresenter.m; sourceTree = "<group>"; };
+		185E4104208E0EB600E56ACD /* IMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMainView.h; sourceTree = "<group>"; };
+		185E4105208E0EE600E56ACD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		185E4106208E0EE600E56ACD /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		185E4108208E0F0600E56ACD /* MainPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPresenter.h; sourceTree = "<group>"; };
+		185E4109208E0F0600E56ACD /* MainPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPresenter.m; sourceTree = "<group>"; };
+		185E410C208E142300E56ACD /* ApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		185E410D208E142300E56ACD /* ApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		185E4110208E173000E56ACD /* GankGirlBody.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GankGirlBody.h; sourceTree = "<group>"; };
+		185E4111208E173000E56ACD /* GankGirlBody.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GankGirlBody.m; sourceTree = "<group>"; };
+		185E4113208E17A800E56ACD /* GankGirlResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GankGirlResult.h; sourceTree = "<group>"; };
+		185E4114208E17A800E56ACD /* GankGirlResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GankGirlResult.m; sourceTree = "<group>"; };
+		185E4116208E181900E56ACD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		185E4119208E1B2100E56ACD /* GankGirlModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GankGirlModel.h; sourceTree = "<group>"; };
+		185E411A208E1B2100E56ACD /* GankGirlModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GankGirlModel.m; sourceTree = "<group>"; };
+		185E411C208E255F00E56ACD /* CardTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardTableViewCell.h; sourceTree = "<group>"; };
+		185E411D208E255F00E56ACD /* CardTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardTableViewCell.m; sourceTree = "<group>"; };
+		185E411F208E2AE200E56ACD /* NetRequst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetRequst.h; sourceTree = "<group>"; };
+		185E4120208E2AE200E56ACD /* NetRequst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetRequst.m; sourceTree = "<group>"; };
+		4A91C938095D3DDF674A915C /* Pods_BeautyGirl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeautyGirl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55065D86EA752C632C6018AC /* Pods-BeautyGirl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautyGirl.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeautyGirl/Pods-BeautyGirl.release.xcconfig"; sourceTree = "<group>"; };
+		BA000EA80AE405D9B15BD489 /* Pods-BeautyGirl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautyGirl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautyGirl/Pods-BeautyGirl.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1838695C208CB77B00809FA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02E54C78A538FEFB4577F52E /* Pods_BeautyGirl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18386956208CB77B00809FA6 = {
+			isa = PBXGroup;
+			children = (
+				18386961208CB77B00809FA6 /* BeautyGirl */,
+				18386960208CB77B00809FA6 /* Products */,
+				587D97EF2FCDBD3B51EDD70C /* Pods */,
+				BF133409F65B07F89E11E143 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18386960208CB77B00809FA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1838695F208CB77B00809FA6 /* BeautyGirl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18386961208CB77B00809FA6 /* BeautyGirl */ = {
+			isa = PBXGroup;
+			children = (
+				185E4118208E1A0700E56ACD /* Supporting Files */,
+				185E40E2208DFD9900E56ACD /* Class */,
+				185E40EF208DFEE900E56ACD /* Resource */,
+			);
+			path = BeautyGirl;
+			sourceTree = "<group>";
+		};
+		185E40E2208DFD9900E56ACD /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				185E40EE208DFED900E56ACD /* APP */,
+				185E40EC208DFE8000E56ACD /* Modules */,
+				185E40E3208DFDCD00E56ACD /* General */,
+				185E40E5208DFDF300E56ACD /* Helpers */,
+				185E40E4208DFDE800E56ACD /* Vendors */,
+				185E40EB208DFE5600E56ACD /* Macro */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		185E40E3208DFDCD00E56ACD /* General */ = {
+			isa = PBXGroup;
+			children = (
+				185E40E6208DFE1C00E56ACD /* Base */,
+				185E40EA208DFE3C00E56ACD /* Models */,
+				185E40E9208DFE3700E56ACD /* Views */,
+				185E40E8208DFE2E00E56ACD /* Core */,
+				185E40E7208DFE2300E56ACD /* Categories */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		185E40E4208DFDE800E56ACD /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		185E40E5208DFDF300E56ACD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		185E40E6208DFE1C00E56ACD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				185E40F5208E004F00E56ACD /* Controller */,
+				185E40F2208E003300E56ACD /* MVP */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		185E40E7208DFE2300E56ACD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		185E40E8208DFE2E00E56ACD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				185E410B208E134300E56ACD /* Net */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		185E40E9208DFE3700E56ACD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		185E40EA208DFE3C00E56ACD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				185E4110208E173000E56ACD /* GankGirlBody.h */,
+				185E4111208E173000E56ACD /* GankGirlBody.m */,
+				185E4113208E17A800E56ACD /* GankGirlResult.h */,
+				185E4114208E17A800E56ACD /* GankGirlResult.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		185E40EB208DFE5600E56ACD /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		185E40EC208DFE8000E56ACD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				185E40ED208DFEC600E56ACD /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		185E40ED208DFEC600E56ACD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				185E4103208E0E9200E56ACD /* View */,
+				185E4102208E0E7B00E56ACD /* Controller */,
+				185E4101208E0E7400E56ACD /* Presenter */,
+				185E4100208E0E6E00E56ACD /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		185E40EE208DFED900E56ACD /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				18386962208CB77B00809FA6 /* AppDelegate.h */,
+				18386963208CB77B00809FA6 /* AppDelegate.m */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		185E40EF208DFEE900E56ACD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1838696D208CB77B00809FA6 /* LaunchScreen.storyboard */,
+				18386970208CB77B00809FA6 /* Info.plist */,
+				1838696B208CB77B00809FA6 /* Assets.xcassets */,
+				185E40F0208DFEF400E56ACD /* Images */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		185E40F0208DFEF400E56ACD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		185E40F2208E003300E56ACD /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				185E40F4208E004200E56ACD /* Presenter */,
+				185E40F3208E003C00E56ACD /* View */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		185E40F3208E003C00E56ACD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				185E40F9208E01B000E56ACD /* IMVPView.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		185E40F4208E004200E56ACD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				185E40FD208E0D9600E56ACD /* BasePresenter.h */,
+				185E40FE208E0D9600E56ACD /* BasePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		185E40F5208E004F00E56ACD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				185E40FA208E0A9500E56ACD /* BaseViewController.h */,
+				185E40FB208E0A9500E56ACD /* BaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		185E4100208E0E6E00E56ACD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				185E4119208E1B2100E56ACD /* GankGirlModel.h */,
+				185E411A208E1B2100E56ACD /* GankGirlModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		185E4101208E0E7400E56ACD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				185E4108208E0F0600E56ACD /* MainPresenter.h */,
+				185E4109208E0F0600E56ACD /* MainPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		185E4102208E0E7B00E56ACD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				185E4105208E0EE600E56ACD /* MainViewController.h */,
+				185E4106208E0EE600E56ACD /* MainViewController.m */,
+				185E4104208E0EB600E56ACD /* IMainView.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		185E4103208E0E9200E56ACD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				185E411C208E255F00E56ACD /* CardTableViewCell.h */,
+				185E411D208E255F00E56ACD /* CardTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		185E410B208E134300E56ACD /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				185E410F208E16E800E56ACD /* Api */,
+				185E410C208E142300E56ACD /* ApiManager.h */,
+				185E410D208E142300E56ACD /* ApiManager.m */,
+				185E411F208E2AE200E56ACD /* NetRequst.h */,
+				185E4120208E2AE200E56ACD /* NetRequst.m */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		185E410F208E16E800E56ACD /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		185E4118208E1A0700E56ACD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				185E4116208E181900E56ACD /* PrefixHeader.pch */,
+				18386971208CB77B00809FA6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		587D97EF2FCDBD3B51EDD70C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA000EA80AE405D9B15BD489 /* Pods-BeautyGirl.debug.xcconfig */,
+				55065D86EA752C632C6018AC /* Pods-BeautyGirl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF133409F65B07F89E11E143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A91C938095D3DDF674A915C /* Pods_BeautyGirl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1838695E208CB77B00809FA6 /* BeautyGirl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18386975208CB77B00809FA6 /* Build configuration list for PBXNativeTarget "BeautyGirl" */;
+			buildPhases = (
+				10DA52D4F135094632C85537 /* [CP] Check Pods Manifest.lock */,
+				1838695B208CB77B00809FA6 /* Sources */,
+				1838695C208CB77B00809FA6 /* Frameworks */,
+				1838695D208CB77B00809FA6 /* Resources */,
+				81665950AAD3FB6A6474B586 /* [CP] Embed Pods Frameworks */,
+				0EDC6BCA07FF85736FC8141A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeautyGirl;
+			productName = BeautyGirl;
+			productReference = 1838695F208CB77B00809FA6 /* BeautyGirl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18386957208CB77B00809FA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = wy;
+				TargetAttributes = {
+					1838695E208CB77B00809FA6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1838695A208CB77B00809FA6 /* Build configuration list for PBXProject "BeautyGirl" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18386956208CB77B00809FA6;
+			productRefGroup = 18386960208CB77B00809FA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1838695E208CB77B00809FA6 /* BeautyGirl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1838695D208CB77B00809FA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1838696F208CB77B00809FA6 /* LaunchScreen.storyboard in Resources */,
+				1838696C208CB77B00809FA6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EDC6BCA07FF85736FC8141A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeautyGirl/Pods-BeautyGirl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		10DA52D4F135094632C85537 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeautyGirl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81665950AAD3FB6A6474B586 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BeautyGirl/Pods-BeautyGirl-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTSImageViewController/JTSImageViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTSImageViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeautyGirl/Pods-BeautyGirl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1838695B208CB77B00809FA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185E410E208E142300E56ACD /* ApiManager.m in Sources */,
+				18386972208CB77B00809FA6 /* main.m in Sources */,
+				185E411E208E255F00E56ACD /* CardTableViewCell.m in Sources */,
+				185E4115208E17A800E56ACD /* GankGirlResult.m in Sources */,
+				185E410A208E0F0600E56ACD /* MainPresenter.m in Sources */,
+				185E411B208E1B2100E56ACD /* GankGirlModel.m in Sources */,
+				185E40FF208E0D9600E56ACD /* BasePresenter.m in Sources */,
+				185E40FC208E0A9500E56ACD /* BaseViewController.m in Sources */,
+				185E4107208E0EE600E56ACD /* MainViewController.m in Sources */,
+				185E4121208E2AE200E56ACD /* NetRequst.m in Sources */,
+				185E4112208E173000E56ACD /* GankGirlBody.m in Sources */,
+				18386964208CB77B00809FA6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1838696D208CB77B00809FA6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1838696E208CB77B00809FA6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18386973208CB77B00809FA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18386974208CB77B00809FA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18386976208CB77B00809FA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA000EA80AE405D9B15BD489 /* Pods-BeautyGirl.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BeautyGirl/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/BeautyGirl/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wy.girl.BeautyGirl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18386977208CB77B00809FA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55065D86EA752C632C6018AC /* Pods-BeautyGirl.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BeautyGirl/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/BeautyGirl/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wy.girl.BeautyGirl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1838695A208CB77B00809FA6 /* Build configuration list for PBXProject "BeautyGirl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18386973208CB77B00809FA6 /* Debug */,
+				18386974208CB77B00809FA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18386975208CB77B00809FA6 /* Build configuration list for PBXNativeTarget "BeautyGirl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18386976208CB77B00809FA6 /* Debug */,
+				18386977208CB77B00809FA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18386957208CB77B00809FA6 /* Project object */;
+}
