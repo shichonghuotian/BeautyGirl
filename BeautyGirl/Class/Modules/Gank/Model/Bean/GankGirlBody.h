@@ -6,9 +6,9 @@
 //  Copyright © 2018年 wy. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseGirlBody.h"
 
-@interface GankGirlBody : NSObject
+@interface GankGirlBody : BaseGirlBody
 
 @property (copy,nonatomic) NSString *ID;
 @property (copy,nonatomic) NSString *createAt;
@@ -16,7 +16,6 @@
 @property (copy,nonatomic) NSString *publishedAt;
 @property (copy,nonatomic) NSString *source;
 @property (copy,nonatomic) NSString *type;
-@property (copy,nonatomic) NSString *url;
 @property (assign,nonatomic) BOOL used;
 @property (copy,nonatomic) NSString *who;
 

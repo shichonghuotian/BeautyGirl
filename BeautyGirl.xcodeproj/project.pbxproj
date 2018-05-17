@@ -45,6 +45,8 @@
 		18A7470620AC9EBE00594D26 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7470520AC9EBE00594D26 /* MenuViewController.m */; };
 		18A7474120ADCDEB00594D26 /* HuabanPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7474020ADCDEB00594D26 /* HuabanPagerController.m */; };
 		18A7474420ADD4C000594D26 /* DoubanPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7474320ADD4C000594D26 /* DoubanPagerController.m */; };
+		18A7474720ADD82800594D26 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7474620ADD82800594D26 /* CardCollectionViewCell.m */; };
+		18A7474A20ADD8D000594D26 /* BaseGirlBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7474920ADD8D000594D26 /* BaseGirlBody.m */; };
 		18C750FB209360B8002B5CA1 /* WPickerInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C750FA209360B8002B5CA1 /* WPickerInputView.m */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +128,10 @@
 		18A7474020ADCDEB00594D26 /* HuabanPagerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuabanPagerController.m; sourceTree = "<group>"; };
 		18A7474220ADD4C000594D26 /* DoubanPagerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanPagerController.h; sourceTree = "<group>"; };
 		18A7474320ADD4C000594D26 /* DoubanPagerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanPagerController.m; sourceTree = "<group>"; };
+		18A7474520ADD82800594D26 /* CardCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
+		18A7474620ADD82800594D26 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
+		18A7474820ADD8D000594D26 /* BaseGirlBody.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseGirlBody.h; sourceTree = "<group>"; };
+		18A7474920ADD8D000594D26 /* BaseGirlBody.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseGirlBody.m; sourceTree = "<group>"; };
 		18C750F9209360B8002B5CA1 /* WPickerInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPickerInputView.h; sourceTree = "<group>"; };
 		18C750FA209360B8002B5CA1 /* WPickerInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPickerInputView.m; sourceTree = "<group>"; };
 		4A91C938095D3DDF674A915C /* Pods_BeautyGirl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeautyGirl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +236,8 @@
 			children = (
 				1849D77B20AB3D1F008A3738 /* BaseGirlModel.h */,
 				1849D77C20AB3D1F008A3738 /* BaseGirlModel.m */,
+				18A7474820ADD8D000594D26 /* BaseGirlBody.h */,
+				18A7474920ADD8D000594D26 /* BaseGirlBody.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +310,8 @@
 			children = (
 				185E411C208E255F00E56ACD /* CardTableViewCell.h */,
 				185E411D208E255F00E56ACD /* CardTableViewCell.m */,
+				18A7474520ADD82800594D26 /* CardCollectionViewCell.h */,
+				18A7474620ADD82800594D26 /* CardCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -743,6 +753,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BeautyGirl/Pods-BeautyGirl-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JTSImageViewController/JTSImageViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -760,6 +771,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTSImageViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -815,12 +827,14 @@
 				18A746D820AC22C300594D26 /* HuabanResp.m in Sources */,
 				18A746D520AC228200594D26 /* HuabanGirlBody.m in Sources */,
 				18A746D120AC222F00594D26 /* HuabanModel.m in Sources */,
+				18A7474720ADD82800594D26 /* CardCollectionViewCell.m in Sources */,
 				185E4121208E2AE200E56ACD /* NetRequst.m in Sources */,
 				18C750FB209360B8002B5CA1 /* WPickerInputView.m in Sources */,
 				185E4112208E173000E56ACD /* GankGirlBody.m in Sources */,
 				18A7474120ADCDEB00594D26 /* HuabanPagerController.m in Sources */,
 				18386964208CB77B00809FA6 /* AppDelegate.m in Sources */,
 				18A746F920AC3EED00594D26 /* TaoFemaleViewController.m in Sources */,
+				18A7474A20ADD8D000594D26 /* BaseGirlBody.m in Sources */,
 				18A746EA20AC2D3600594D26 /* PageBean.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

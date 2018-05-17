@@ -32,9 +32,9 @@
     UIViewController *leftVC = [[MenuViewController alloc]init];
     
     UINavigationController *centerNvaVC = [[UINavigationController alloc]initWithRootViewController:centerVC];
-    UINavigationController *leftNvaVC = [[UINavigationController alloc]initWithRootViewController:leftVC];
+//    UINavigationController *leftNvaVC = [[UINavigationController alloc]initWithRootViewController:leftVC];
     
-    self.rootController = [[MMDrawerController alloc]initWithCenterViewController:centerNvaVC leftDrawerViewController:leftNvaVC rightDrawerViewController:nil];
+    self.rootController = [[MMDrawerController alloc]initWithCenterViewController:centerNvaVC leftDrawerViewController:leftVC rightDrawerViewController:nil];
     
     self.rootController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.rootController.closeDrawerGestureModeMask =MMCloseDrawerGestureModeAll;

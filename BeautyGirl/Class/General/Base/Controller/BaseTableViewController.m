@@ -7,8 +7,9 @@
 //
 
 #import "BaseTableViewController.h"
+#import "CHTCollectionViewWaterfallLayout.h"
 
-@interface BaseTableViewController ()
+@interface BaseTableViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, CHTCollectionViewDelegateWaterfallLayout>
 
 @end
 
@@ -19,7 +20,7 @@
     
     //这些内容转换到presenter中
     if(!self.hasLoaded) {
-        [self.tableView.mj_header beginRefreshing];
+        [self.collectionView.mj_header beginRefreshing];
         
         self.hasLoaded = YES;
     }
@@ -44,26 +45,30 @@
 -(void)prepareLayout {
     
     self.view.backgroundColor = [UIColor whiteColor];
+    CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
+
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    self.collectionView.collectionViewLayout = layout;
+    [self.view addSubview:self.collectionView];
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.tableView];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 150;//期望高度
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.left.right.top.bottom.equalTo(self.view);
+    }];
+    [self.collectionView registerClass:[CardCollectionViewCell class] forCellWithReuseIdentifier:[CardCollectionViewCell CellIdentifier]];
+
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
     
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         
         [self.presenter loadData];
         
     }] ;
     
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        
-        [self.presenter loadMoreData];
-    }];
-    
-    [self.tableView registerClass:[CardTableViewCell class] forCellReuseIdentifier:[CardTableViewCell TableViewCellIdentifier]];
+  
     
     
     
@@ -82,28 +87,35 @@
     
     
     
-    [self.tableView.mj_header endRefreshing];
+    [self.collectionView.mj_header endRefreshing];
     
     [self.dataArray removeAllObjects];
     //可能会竞速
     [self.dataArray addObjectsFromArray:resultArray];
-    [self.tableView reloadData];
+    [self.collectionView reloadData];
+    
+    @weakify(self)
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        @strongify(self)
+        [self.presenter loadMoreData];
+    }];
+    
     
 }
 -(void)onLoadMoreSuccess:(NSArray*)resultArray {
-    [self.tableView.mj_footer endRefreshing];
+    [self.collectionView.mj_footer endRefreshing];
     
     [self.dataArray addObjectsFromArray:resultArray];
-    [self.tableView reloadData];
+    [self.collectionView reloadData];
 }
 
 
 
 -(void)onFailure {
     NSLog(@"onFailure");
-    [self.tableView.mj_header endRefreshing];
+    [self.collectionView.mj_header endRefreshing];
     
-    [self.tableView.mj_footer endRefreshing];
+    [self.collectionView.mj_footer endRefreshing];
     
     [self showTextHUD:@"request faild"];
 }
@@ -111,42 +123,52 @@
 
 
 #pragma mark - TableView DataSource delegate
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
 
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[CardCollectionViewCell CellIdentifier] forIndexPath:indexPath];
     
-    CardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[CardTableViewCell TableViewCellIdentifier] forIndexPath:indexPath];
+    BaseGirlBody *body = [self.dataArray objectAtIndex:indexPath.row];
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.backgroundColor = [UIColor whiteColor];
+    NSString *imgUrlString = body.url;
     
-    id data = self.dataArray[indexPath.row];
-    
-    //    NSLog(@"imag url = %@",girl.url);
-//        [cell.contentImageView setIconURL:[NSURL URLWithString:data.url]];
-    
-
-    [self loadCell:cell data:data];
-    
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imgUrlString] placeholderImage:[UIImage imageNamed:@"loading"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (image) {
+            if (!CGSizeEqualToSize(body.imageSize, image.size)) {
+                body.imageSize = image.size;
+                [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+            }
+        }
+    }];
     
     return cell;
-    
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark - CHTCollectionViewDelegateWaterfallLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    BaseGirlBody *body = [self.dataArray objectAtIndex:indexPath.row];
+    if (!CGSizeEqualToSize(body.imageSize, CGSizeZero)) {
+        return body.imageSize;
+    }
+    return CGSizeMake(150, 150);
+}
 
+#pragma mark - UICollectionView Delegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    CardCollectionViewCell *cell =(CardCollectionViewCell*) [collectionView cellForItemAtIndexPath:indexPath];
+    [self showLargeImagView:cell.imageView];
+
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    CardTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [self showLargeImagView:cell.contentImageView];
     
 }
 

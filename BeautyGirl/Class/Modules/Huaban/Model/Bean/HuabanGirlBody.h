@@ -6,14 +6,13 @@
 //  Copyright © 2018年 wy. All rights reserved.
 //
 
-#import "BaseGirlModel.h"
+#import "BaseGirlBody.h"
 
-@interface HuabanGirlBody : NSObject
+@interface HuabanGirlBody : BaseGirlBody
 //data class HuaBanBody(var thumb:String , var title : String , var url : String , var type : Int) {
 
 @property (copy,nonatomic) NSString *thumb;
 @property (copy,nonatomic) NSString *title;
-@property (copy,nonatomic) NSString *url;
 
 @property (assign,nonatomic) NSInteger type;
 

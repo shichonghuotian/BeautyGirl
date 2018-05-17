@@ -13,12 +13,14 @@
 #import <MJRefresh/MJRefresh.h>
 #import "ITableView.h"
 #import "BaseViewController.h"
-
+#import "CardCollectionViewCell.h"
+#import "BaseGirlBody.h"
 @interface BaseTableViewController : BaseViewController<ITableView,UITableViewDataSource,UITableViewDelegate>
 
 @property (strong,nonatomic) id presenter;
+@property (strong, nonatomic) UICollectionView *collectionView;
 
-@property (strong,nonatomic) UITableView *tableView ;
+//@property (strong,nonatomic) UITableView *tableView ;
 @property (strong,nonatomic) NSMutableArray *dataArray;
 @property (assign,nonatomic) BOOL hasLoaded ;
 

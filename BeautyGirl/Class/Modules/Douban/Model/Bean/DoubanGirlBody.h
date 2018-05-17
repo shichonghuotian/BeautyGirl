@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseGirlBody.h"
 
-@interface DoubanGirlBody : NSObject
+@interface DoubanGirlBody : BaseGirlBody
 @property (copy,nonatomic) NSString *title;
-@property (copy,nonatomic) NSString *url;
+
 @property (assign,nonatomic) NSInteger type;
 
 @end

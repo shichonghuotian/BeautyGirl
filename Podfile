@@ -18,6 +18,7 @@ pod 'hpple', '~> 0.2.0'
 pod 'MMDrawerController', '~> 0.6'
  pod 'MGJRouter', '~> 0.9.3'
  pod 'TYPagerController'
+ pod 'CHTCollectionViewWaterfallLayout', '~> 0.9.7'
 
 end
 

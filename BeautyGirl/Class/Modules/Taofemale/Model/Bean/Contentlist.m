@@ -17,4 +17,9 @@
 //             };
 //}
 
+-(NSString *)url {
+    
+    return self.avatarUrl;
+}
+
 @end

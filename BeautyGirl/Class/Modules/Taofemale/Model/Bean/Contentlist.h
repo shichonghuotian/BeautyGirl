@@ -6,7 +6,7 @@
 //  Copyright © 2018年 wy. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseGirlBody.h"
 //data class Contentlist(var totalFavorNum : Int , var realName: String,
 //                       var totalFanNum : String , var link: String,
 //                       var weight : String , var avatarUrl : String,
@@ -14,7 +14,7 @@
 //                       var city : String , var height :String,
 //                       var imgList : ArrayList<String> , var cardUrl :String) {
 
-@interface Contentlist : NSObject
+@interface Contentlist : BaseGirlBody
 @property (assign,nonatomic) NSInteger totalFavorNum;
 @property (copy,nonatomic) NSString * realName;
 @property (copy,nonatomic) NSString * totalFanNum;
