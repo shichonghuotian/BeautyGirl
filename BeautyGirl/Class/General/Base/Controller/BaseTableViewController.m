@@ -11,6 +11,9 @@
 
 @interface BaseTableViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, CHTCollectionViewDelegateWaterfallLayout>
 
+@property (assign,nonatomic) BOOL scrollUporDown;
+//@property (assign,nonatomic) BOOL _scrollUporDown;
+
 @end
 
 @implementation BaseTableViewController
@@ -25,9 +28,22 @@
         self.hasLoaded = YES;
     }
 }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+//    [self followScrollView:self.collectionView];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+//
+//    [self showNavBarAnimated:NO];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 
@@ -43,6 +59,7 @@
 
 
 -(void)prepareLayout {
+   
     
     self.view.backgroundColor = [UIColor whiteColor];
     CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
@@ -68,7 +85,7 @@
         
     }] ;
     
-  
+    
     
     
     
@@ -165,13 +182,41 @@
 
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    
-}
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+//    static float newy = 0;
+//    static float oldy = 0;
+//    //获取当前滚动视图的contentOffset.y
+//    newy = scrollView.contentOffset.y;
+//    //判断滚动视图向上还是向下
+//    if (newy != oldy ) {
+//        if (newy > oldy) {
+//            self.scrollUporDown = YES;
+//        }else if(newy < oldy){
+//            self.scrollUporDown = NO;
+//        }
+//        oldy = newy;
+//    }
+//    //定义初始的navigationBar的位置
+//    if (newy == -60) {
+//        [UIView animateWithDuration:1 animations:^{
+//            self.navigationController.navigationBar.frame = CGRectMake(0, 20, self.view.frame.size.width, 40);
+//        }];
+//    }else{
+//        if (self.scrollUporDown == YES) {
+//            [UIView animateWithDuration:1 animations:^{
+//                self.navigationController.navigationBar.frame = CGRectMake(0, -40, self.view.frame.size.width, 40);
+//            }];
+//        }
+//        else if (self.scrollUporDown == NO) {
+//            [UIView animateWithDuration:0.5 animations:^{
+//                self.navigationController.navigationBar.frame = CGRectMake(0, 20, self.view.frame.size.width, 40);
+//            }];
+//        }
+//    }
+//
+}
 
 -(void)showLargeImagView:(UIImageView*)imageView {
     JTSImageInfo *imageInfo = [[JTSImageInfo alloc] init];
@@ -183,6 +228,10 @@
     
 }
 
+
+- (void)dealloc {
+//    [self stopFollowingScrollView];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

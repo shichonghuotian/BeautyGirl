@@ -21,7 +21,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.categoryArray = @[@"萌妹子",@"豆瓣妹子",@"花瓣妹子",@"淘女郎"];
 
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100)];
 }
 
 
@@ -45,11 +47,11 @@
 
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //拿到我们的LitterLCenterViewController，让它去push
-//    UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
-//    [nav pushViewController:showVC animated:NO];
+
+    
+    
     //当我们push成功之后，关闭我们的抽屉
-    [MGJRouter openURL:[NSString stringWithFormat:@"wyg://main/%ld",indexPath.row]];
+    [MGJRouter openURL:[NSString stringWithFormat:@"wyg://main/%ld?title=%@",indexPath.row,self.categoryArray[indexPath.row]]];
 
     [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
         //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。

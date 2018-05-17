@@ -36,8 +36,10 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.navigationController.hidesBarsOnSwipe = YES;
+
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.title = @"萌妹子";
     self.navigationItem.leftBarButtonItem = [[MMDrawerBarButtonItem alloc]initWithTarget:self action:@selector(menuAction)];
     self.controllers = @[[[GankViewController alloc] init],[[DoubanPagerController alloc] init],[[HuabanPagerController alloc] init],[[TaoFemaleViewController alloc] init]];
     
@@ -46,10 +48,14 @@
         @strongify(self)
         
         NSInteger index = [[routerParameters objectForKey:@"query"] integerValue];
+        
+        self.title = [routerParameters objectForKey:@"title"];
         [self replaceController:index];
         //
         NSLog(@"routerParameters %@",routerParameters);
     }];
+    
+    
     
 
     [self addGirlController];
