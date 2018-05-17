@@ -8,11 +8,7 @@
 
 #import "BasePresenter.h"
 #import "IMainView.h"
-#import "GankGirlModel.h"
 
 @interface MainPresenter : BasePresenter<id<IMainView>>
-
--(void)loadData;
--(void)loadMoreData;
 
 @end

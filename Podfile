@@ -13,6 +13,11 @@ pod 'MJRefresh'
 #pod 'AFNetworking'
 pod 'JTSImageViewController'
 pod 'AFNetworking'
-pod 'Firebase/AdMob' 
+pod 'Firebase/AdMob'
+pod 'hpple', '~> 0.2.0'
+pod 'MMDrawerController', '~> 0.6'
+ pod 'MGJRouter', '~> 0.9.3'
+ pod 'TYPagerController'
+
 end
 

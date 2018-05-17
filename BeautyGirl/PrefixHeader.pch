@@ -19,6 +19,10 @@
 #define GAD_UUID @"ca-app-pub-9193264970438351/5347714858"
 #define WColorRGB(r,g,b,p) [UIColor colorWithRed:r/255. green:g/255. blue:b/255. alpha:p]
 
+#define Huaban_App_ID @"15314"
+
+#define Huaban_APP_SIGN @"d424376f51f1467da1b8c75debebf148"
+#import "MGJRouter.h"
 
 
 

@@ -31,5 +31,11 @@
     _view = nil;
 }
 
+-(void)loadData {
+    
+}
+-(void)loadMoreData {
+    
+}
 
 @end

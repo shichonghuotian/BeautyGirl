@@ -1,0 +1,16 @@
+//
+//  DoubanGirlBody.h
+//  BeautyGirl
+//
+//  Created by Apple on 2018/5/15.
+//  Copyright © 2018年 wy. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface DoubanGirlBody : NSObject
+@property (copy,nonatomic) NSString *title;
+@property (copy,nonatomic) NSString *url;
+@property (assign,nonatomic) NSInteger type;
+
+@end

@@ -10,24 +10,12 @@
 
 @implementation GankGirlModel
 
-//使用命令，直接执行
--(instancetype)init {
-    self = [super init];
+
+-(RACSignal *)getData {
     
-    if(self) {
-        
-        @weakify(self)
-        _requestCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-            @strongify(self)
-            return [self getGirl:self.number page:self.page];
-        }];
-        
-        
-    
-    }
-    
-    return self;
+     return [self getGirl:self.number page:self.page];
 }
+
 
 
 -(RACSignal *)getGirl:(NSInteger)number page:(NSInteger)page {

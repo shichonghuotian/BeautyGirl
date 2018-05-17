@@ -30,6 +30,25 @@
     
 }
 
+- (void)doHtmlGET:(NSString*) url success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure{
+    
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //    [self setTimeOut:manager];
+    
+    
+    manager.responseSerializer =[AFHTTPResponseSerializer serializer];
+    //申明请求的数据是json类型
+    manager.requestSerializer=[AFHTTPRequestSerializer serializer];
+    //申明请求的数据是json类型
+    
+    self.opt = [manager GET:[self getUTF8String:url] parameters:nil progress:nil success:success failure:failure];
+    
+    
+    
+    
+}
+
 -(NSString*)getUTF8String:(NSString*)url {
     
     

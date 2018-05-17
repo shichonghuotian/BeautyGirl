@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ITableView.h"
 
 @interface BasePresenter<V> : NSObject {
     
@@ -28,4 +29,6 @@
  卸载view
  */
 -(void)onDetachview;
+-(void)loadData;
+-(void)loadMoreData;
 @end

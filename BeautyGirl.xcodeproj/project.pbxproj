@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		02E54C78A538FEFB4577F52E /* Pods_BeautyGirl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A91C938095D3DDF674A915C /* Pods_BeautyGirl.framework */; };
+		181565CC20ABD61F00FD32DF /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181565CB20ABD61F00FD32DF /* BaseTableViewController.m */; };
 		18386964208CB77B00809FA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18386963208CB77B00809FA6 /* AppDelegate.m */; };
 		1838696C208CB77B00809FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1838696B208CB77B00809FA6 /* Assets.xcassets */; };
 		1838696F208CB77B00809FA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1838696D208CB77B00809FA6 /* LaunchScreen.storyboard */; };
 		18386972208CB77B00809FA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18386971208CB77B00809FA6 /* main.m */; };
+		1849D77220AB3256008A3738 /* DoubanGirlBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 1849D77120AB3256008A3738 /* DoubanGirlBody.m */; };
+		1849D77620AB3CA4008A3738 /* DoubanPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1849D77520AB3CA4008A3738 /* DoubanPresenter.m */; };
+		1849D77920AB3CBD008A3738 /* DoubanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1849D77820AB3CBD008A3738 /* DoubanModel.m */; };
+		1849D77D20AB3D1F008A3738 /* BaseGirlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1849D77C20AB3D1F008A3738 /* BaseGirlModel.m */; };
+		1849D78020AB3F3E008A3738 /* DoubanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1849D77F20AB3F3E008A3738 /* DoubanViewController.m */; };
 		185E40FC208E0A9500E56ACD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E40FB208E0A9500E56ACD /* BaseViewController.m */; };
 		185E40FF208E0D9600E56ACD /* BasePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E40FE208E0D9600E56ACD /* BasePresenter.m */; };
 		185E4107208E0EE600E56ACD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E4106208E0EE600E56ACD /* MainViewController.m */; };
@@ -22,9 +28,30 @@
 		185E411B208E1B2100E56ACD /* GankGirlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E411A208E1B2100E56ACD /* GankGirlModel.m */; };
 		185E411E208E255F00E56ACD /* CardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E411D208E255F00E56ACD /* CardTableViewCell.m */; };
 		185E4121208E2AE200E56ACD /* NetRequst.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E4120208E2AE200E56ACD /* NetRequst.m */; };
+		18A746CE20AC221600594D26 /* HuabanPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746CD20AC221600594D26 /* HuabanPresenter.m */; };
+		18A746D120AC222F00594D26 /* HuabanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746D020AC222F00594D26 /* HuabanModel.m */; };
+		18A746D520AC228200594D26 /* HuabanGirlBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746D420AC228200594D26 /* HuabanGirlBody.m */; };
+		18A746D820AC22C300594D26 /* HuabanResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746D720AC22C300594D26 /* HuabanResp.m */; };
+		18A746DB20AC252B00594D26 /* HuabanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746DA20AC252B00594D26 /* HuabanViewController.m */; };
+		18A746E420AC2D0000594D26 /* TaoFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746E320AC2D0000594D26 /* TaoFemale.m */; };
+		18A746E720AC2D1F00594D26 /* ShowapiResBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746E620AC2D1F00594D26 /* ShowapiResBody.m */; };
+		18A746EA20AC2D3600594D26 /* PageBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746E920AC2D3600594D26 /* PageBean.m */; };
+		18A746ED20AC2D5800594D26 /* Contentlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746EC20AC2D5800594D26 /* Contentlist.m */; };
+		18A746F020AC3D6E00594D26 /* TaoFemaleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746EF20AC3D6E00594D26 /* TaoFemaleModel.m */; };
+		18A746F620AC3E7A00594D26 /* TaoFemalePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746F520AC3E7A00594D26 /* TaoFemalePresenter.m */; };
+		18A746F920AC3EED00594D26 /* TaoFemaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746F820AC3EED00594D26 /* TaoFemaleViewController.m */; };
+		18A7470020AC97BE00594D26 /* GankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A746FF20AC97BE00594D26 /* GankViewController.m */; };
+		18A7470320AC97F600594D26 /* GankPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7470220AC97F600594D26 /* GankPresenter.m */; };
+		18A7470620AC9EBE00594D26 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7470520AC9EBE00594D26 /* MenuViewController.m */; };
+		18A7474120ADCDEB00594D26 /* HuabanPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7474020ADCDEB00594D26 /* HuabanPagerController.m */; };
+		18A7474420ADD4C000594D26 /* DoubanPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7474320ADD4C000594D26 /* DoubanPagerController.m */; };
+		18C750FB209360B8002B5CA1 /* WPickerInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C750FA209360B8002B5CA1 /* WPickerInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181565CA20ABD61F00FD32DF /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		181565CB20ABD61F00FD32DF /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		181565CD20ABD67400FD32DF /* ITableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITableView.h; sourceTree = "<group>"; };
 		1838695F208CB77B00809FA6 /* BeautyGirl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyGirl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18386962208CB77B00809FA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18386963208CB77B00809FA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,6 +59,16 @@
 		1838696E208CB77B00809FA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18386970208CB77B00809FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18386971208CB77B00809FA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1849D77020AB3256008A3738 /* DoubanGirlBody.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanGirlBody.h; sourceTree = "<group>"; };
+		1849D77120AB3256008A3738 /* DoubanGirlBody.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanGirlBody.m; sourceTree = "<group>"; };
+		1849D77420AB3CA4008A3738 /* DoubanPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanPresenter.h; sourceTree = "<group>"; };
+		1849D77520AB3CA4008A3738 /* DoubanPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanPresenter.m; sourceTree = "<group>"; };
+		1849D77720AB3CBD008A3738 /* DoubanModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanModel.h; sourceTree = "<group>"; };
+		1849D77820AB3CBD008A3738 /* DoubanModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanModel.m; sourceTree = "<group>"; };
+		1849D77B20AB3D1F008A3738 /* BaseGirlModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseGirlModel.h; sourceTree = "<group>"; };
+		1849D77C20AB3D1F008A3738 /* BaseGirlModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseGirlModel.m; sourceTree = "<group>"; };
+		1849D77E20AB3F3E008A3738 /* DoubanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanViewController.h; sourceTree = "<group>"; };
+		1849D77F20AB3F3E008A3738 /* DoubanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanViewController.m; sourceTree = "<group>"; };
 		185E40F9208E01B000E56ACD /* IMVPView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMVPView.h; sourceTree = "<group>"; };
 		185E40FA208E0A9500E56ACD /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		185E40FB208E0A9500E56ACD /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -55,6 +92,42 @@
 		185E411D208E255F00E56ACD /* CardTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardTableViewCell.m; sourceTree = "<group>"; };
 		185E411F208E2AE200E56ACD /* NetRequst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetRequst.h; sourceTree = "<group>"; };
 		185E4120208E2AE200E56ACD /* NetRequst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetRequst.m; sourceTree = "<group>"; };
+		18A746CC20AC221600594D26 /* HuabanPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuabanPresenter.h; sourceTree = "<group>"; };
+		18A746CD20AC221600594D26 /* HuabanPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuabanPresenter.m; sourceTree = "<group>"; };
+		18A746CF20AC222F00594D26 /* HuabanModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuabanModel.h; sourceTree = "<group>"; };
+		18A746D020AC222F00594D26 /* HuabanModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuabanModel.m; sourceTree = "<group>"; };
+		18A746D320AC228200594D26 /* HuabanGirlBody.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuabanGirlBody.h; sourceTree = "<group>"; };
+		18A746D420AC228200594D26 /* HuabanGirlBody.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuabanGirlBody.m; sourceTree = "<group>"; };
+		18A746D620AC22C300594D26 /* HuabanResp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuabanResp.h; sourceTree = "<group>"; };
+		18A746D720AC22C300594D26 /* HuabanResp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuabanResp.m; sourceTree = "<group>"; };
+		18A746D920AC252B00594D26 /* HuabanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuabanViewController.h; sourceTree = "<group>"; };
+		18A746DA20AC252B00594D26 /* HuabanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuabanViewController.m; sourceTree = "<group>"; };
+		18A746E220AC2D0000594D26 /* TaoFemale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaoFemale.h; sourceTree = "<group>"; };
+		18A746E320AC2D0000594D26 /* TaoFemale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaoFemale.m; sourceTree = "<group>"; };
+		18A746E520AC2D1F00594D26 /* ShowapiResBody.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowapiResBody.h; sourceTree = "<group>"; };
+		18A746E620AC2D1F00594D26 /* ShowapiResBody.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowapiResBody.m; sourceTree = "<group>"; };
+		18A746E820AC2D3600594D26 /* PageBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageBean.h; sourceTree = "<group>"; };
+		18A746E920AC2D3600594D26 /* PageBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageBean.m; sourceTree = "<group>"; };
+		18A746EB20AC2D5800594D26 /* Contentlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contentlist.h; sourceTree = "<group>"; };
+		18A746EC20AC2D5800594D26 /* Contentlist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contentlist.m; sourceTree = "<group>"; };
+		18A746EE20AC3D6E00594D26 /* TaoFemaleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaoFemaleModel.h; sourceTree = "<group>"; };
+		18A746EF20AC3D6E00594D26 /* TaoFemaleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaoFemaleModel.m; sourceTree = "<group>"; };
+		18A746F420AC3E7900594D26 /* TaoFemalePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaoFemalePresenter.h; sourceTree = "<group>"; };
+		18A746F520AC3E7A00594D26 /* TaoFemalePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaoFemalePresenter.m; sourceTree = "<group>"; };
+		18A746F720AC3EED00594D26 /* TaoFemaleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaoFemaleViewController.h; sourceTree = "<group>"; };
+		18A746F820AC3EED00594D26 /* TaoFemaleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaoFemaleViewController.m; sourceTree = "<group>"; };
+		18A746FE20AC97BE00594D26 /* GankViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GankViewController.h; sourceTree = "<group>"; };
+		18A746FF20AC97BE00594D26 /* GankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GankViewController.m; sourceTree = "<group>"; };
+		18A7470120AC97F600594D26 /* GankPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GankPresenter.h; sourceTree = "<group>"; };
+		18A7470220AC97F600594D26 /* GankPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GankPresenter.m; sourceTree = "<group>"; };
+		18A7470420AC9EBE00594D26 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		18A7470520AC9EBE00594D26 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		18A7473F20ADCDEB00594D26 /* HuabanPagerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuabanPagerController.h; sourceTree = "<group>"; };
+		18A7474020ADCDEB00594D26 /* HuabanPagerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuabanPagerController.m; sourceTree = "<group>"; };
+		18A7474220ADD4C000594D26 /* DoubanPagerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanPagerController.h; sourceTree = "<group>"; };
+		18A7474320ADD4C000594D26 /* DoubanPagerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanPagerController.m; sourceTree = "<group>"; };
+		18C750F9209360B8002B5CA1 /* WPickerInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPickerInputView.h; sourceTree = "<group>"; };
+		18C750FA209360B8002B5CA1 /* WPickerInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPickerInputView.m; sourceTree = "<group>"; };
 		4A91C938095D3DDF674A915C /* Pods_BeautyGirl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeautyGirl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55065D86EA752C632C6018AC /* Pods-BeautyGirl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautyGirl.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeautyGirl/Pods-BeautyGirl.release.xcconfig"; sourceTree = "<group>"; };
 		BA000EA80AE405D9B15BD489 /* Pods-BeautyGirl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautyGirl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautyGirl/Pods-BeautyGirl.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +171,67 @@
 				185E40EF208DFEE900E56ACD /* Resource */,
 			);
 			path = BeautyGirl;
+			sourceTree = "<group>";
+		};
+		1849D76C20AB31F7008A3738 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				185E4110208E173000E56ACD /* GankGirlBody.h */,
+				185E4111208E173000E56ACD /* GankGirlBody.m */,
+				185E4113208E17A800E56ACD /* GankGirlResult.h */,
+				185E4114208E17A800E56ACD /* GankGirlResult.m */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
+		1849D76D20AB3225008A3738 /* Douban */ = {
+			isa = PBXGroup;
+			children = (
+				1849D77E20AB3F3E008A3738 /* DoubanViewController.h */,
+				1849D77F20AB3F3E008A3738 /* DoubanViewController.m */,
+				18A7474220ADD4C000594D26 /* DoubanPagerController.h */,
+				18A7474320ADD4C000594D26 /* DoubanPagerController.m */,
+				1849D77320AB3C91008A3738 /* Presenter */,
+				1849D76E20AB3235008A3738 /* Model */,
+			);
+			path = Douban;
+			sourceTree = "<group>";
+		};
+		1849D76E20AB3235008A3738 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1849D76F20AB323E008A3738 /* Bean */,
+				1849D77720AB3CBD008A3738 /* DoubanModel.h */,
+				1849D77820AB3CBD008A3738 /* DoubanModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1849D76F20AB323E008A3738 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				1849D77020AB3256008A3738 /* DoubanGirlBody.h */,
+				1849D77120AB3256008A3738 /* DoubanGirlBody.m */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
+		1849D77320AB3C91008A3738 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1849D77420AB3CA4008A3738 /* DoubanPresenter.h */,
+				1849D77520AB3CA4008A3738 /* DoubanPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1849D77A20AB3D0D008A3738 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1849D77B20AB3D1F008A3738 /* BaseGirlModel.h */,
+				1849D77C20AB3D1F008A3738 /* BaseGirlModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		185E40E2208DFD9900E56ACD /* Class */ = {
@@ -166,6 +300,8 @@
 		185E40E9208DFE3700E56ACD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				185E411C208E255F00E56ACD /* CardTableViewCell.h */,
+				185E411D208E255F00E56ACD /* CardTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,10 +309,6 @@
 		185E40EA208DFE3C00E56ACD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				185E4110208E173000E56ACD /* GankGirlBody.h */,
-				185E4111208E173000E56ACD /* GankGirlBody.m */,
-				185E4113208E17A800E56ACD /* GankGirlResult.h */,
-				185E4114208E17A800E56ACD /* GankGirlResult.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +324,10 @@
 			isa = PBXGroup;
 			children = (
 				185E40ED208DFEC600E56ACD /* Main */,
+				18A746FA20AC974600594D26 /* Gank */,
+				18A746DC20AC2A5200594D26 /* Taofemale */,
+				18A746C920AC21E500594D26 /* Huaban */,
+				1849D76D20AB3225008A3738 /* Douban */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -199,6 +335,7 @@
 		185E40ED208DFEC600E56ACD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				18C750F820935F0F002B5CA1 /* Test */,
 				185E4103208E0E9200E56ACD /* View */,
 				185E4102208E0E7B00E56ACD /* Controller */,
 				185E4101208E0E7400E56ACD /* Presenter */,
@@ -237,6 +374,7 @@
 		185E40F2208E003300E56ACD /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				1849D77A20AB3D0D008A3738 /* Model */,
 				185E40F4208E004200E56ACD /* Presenter */,
 				185E40F3208E003C00E56ACD /* View */,
 			);
@@ -247,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				185E40F9208E01B000E56ACD /* IMVPView.h */,
+				181565CD20ABD67400FD32DF /* ITableView.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +404,8 @@
 			children = (
 				185E40FA208E0A9500E56ACD /* BaseViewController.h */,
 				185E40FB208E0A9500E56ACD /* BaseViewController.m */,
+				181565CA20ABD61F00FD32DF /* BaseTableViewController.h */,
+				181565CB20ABD61F00FD32DF /* BaseTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,8 +413,6 @@
 		185E4100208E0E6E00E56ACD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				185E4119208E1B2100E56ACD /* GankGirlModel.h */,
-				185E411A208E1B2100E56ACD /* GankGirlModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +431,8 @@
 			children = (
 				185E4105208E0EE600E56ACD /* MainViewController.h */,
 				185E4106208E0EE600E56ACD /* MainViewController.m */,
+				18A7470420AC9EBE00594D26 /* MenuViewController.h */,
+				18A7470520AC9EBE00594D26 /* MenuViewController.m */,
 				185E4104208E0EB600E56ACD /* IMainView.h */,
 			);
 			path = Controller;
@@ -300,8 +441,6 @@
 		185E4103208E0E9200E56ACD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				185E411C208E255F00E56ACD /* CardTableViewCell.h */,
-				185E411D208E255F00E56ACD /* CardTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +471,149 @@
 				18386971208CB77B00809FA6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18A746C920AC21E500594D26 /* Huaban */ = {
+			isa = PBXGroup;
+			children = (
+				18A746CB20AC21F600594D26 /* Model */,
+				18A746CA20AC21EF00594D26 /* Presenter */,
+				18A746D920AC252B00594D26 /* HuabanViewController.h */,
+				18A746DA20AC252B00594D26 /* HuabanViewController.m */,
+				18A7473F20ADCDEB00594D26 /* HuabanPagerController.h */,
+				18A7474020ADCDEB00594D26 /* HuabanPagerController.m */,
+			);
+			path = Huaban;
+			sourceTree = "<group>";
+		};
+		18A746CA20AC21EF00594D26 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18A746CC20AC221600594D26 /* HuabanPresenter.h */,
+				18A746CD20AC221600594D26 /* HuabanPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18A746CB20AC21F600594D26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18A746D220AC223600594D26 /* Bean */,
+				18A746CF20AC222F00594D26 /* HuabanModel.h */,
+				18A746D020AC222F00594D26 /* HuabanModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18A746D220AC223600594D26 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				18A746D320AC228200594D26 /* HuabanGirlBody.h */,
+				18A746D420AC228200594D26 /* HuabanGirlBody.m */,
+				18A746D620AC22C300594D26 /* HuabanResp.h */,
+				18A746D720AC22C300594D26 /* HuabanResp.m */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
+		18A746DC20AC2A5200594D26 /* Taofemale */ = {
+			isa = PBXGroup;
+			children = (
+				18A746E120AC2A8200594D26 /* Controller */,
+				18A746DE20AC2A6A00594D26 /* Model */,
+				18A746DD20AC2A6000594D26 /* Presenter */,
+			);
+			path = Taofemale;
+			sourceTree = "<group>";
+		};
+		18A746DD20AC2A6000594D26 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18A746F420AC3E7900594D26 /* TaoFemalePresenter.h */,
+				18A746F520AC3E7A00594D26 /* TaoFemalePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18A746DE20AC2A6A00594D26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18A746DF20AC2A7100594D26 /* Bean */,
+				18A746EE20AC3D6E00594D26 /* TaoFemaleModel.h */,
+				18A746EF20AC3D6E00594D26 /* TaoFemaleModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18A746DF20AC2A7100594D26 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				18A746E220AC2D0000594D26 /* TaoFemale.h */,
+				18A746E320AC2D0000594D26 /* TaoFemale.m */,
+				18A746E520AC2D1F00594D26 /* ShowapiResBody.h */,
+				18A746E620AC2D1F00594D26 /* ShowapiResBody.m */,
+				18A746E820AC2D3600594D26 /* PageBean.h */,
+				18A746E920AC2D3600594D26 /* PageBean.m */,
+				18A746EB20AC2D5800594D26 /* Contentlist.h */,
+				18A746EC20AC2D5800594D26 /* Contentlist.m */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
+		18A746E120AC2A8200594D26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18A746F720AC3EED00594D26 /* TaoFemaleViewController.h */,
+				18A746F820AC3EED00594D26 /* TaoFemaleViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18A746FA20AC974600594D26 /* Gank */ = {
+			isa = PBXGroup;
+			children = (
+				18A746FD20AC97A000594D26 /* Model */,
+				18A746FC20AC979400594D26 /* Presenter */,
+				18A746FB20AC978D00594D26 /* Controller */,
+			);
+			path = Gank;
+			sourceTree = "<group>";
+		};
+		18A746FB20AC978D00594D26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18A746FE20AC97BE00594D26 /* GankViewController.h */,
+				18A746FF20AC97BE00594D26 /* GankViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18A746FC20AC979400594D26 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18A7470120AC97F600594D26 /* GankPresenter.h */,
+				18A7470220AC97F600594D26 /* GankPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18A746FD20AC97A000594D26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1849D76C20AB31F7008A3738 /* Bean */,
+				185E4119208E1B2100E56ACD /* GankGirlModel.h */,
+				185E411A208E1B2100E56ACD /* GankGirlModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18C750F820935F0F002B5CA1 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				18C750F9209360B8002B5CA1 /* WPickerInputView.h */,
+				18C750FA209360B8002B5CA1 /* WPickerInputView.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		587D97EF2FCDBD3B51EDD70C /* Pods */ = {
@@ -464,11 +746,15 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JTSImageViewController/JTSImageViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TYPagerController/TYPagerController.framework",
+				"${BUILT_PRODUCTS_DIR}/hpple/hpple.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -477,11 +763,15 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTSImageViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGJRouter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYPagerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hpple.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,18 +786,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1849D77620AB3CA4008A3738 /* DoubanPresenter.m in Sources */,
+				18A7470620AC9EBE00594D26 /* MenuViewController.m in Sources */,
+				1849D77D20AB3D1F008A3738 /* BaseGirlModel.m in Sources */,
 				185E410E208E142300E56ACD /* ApiManager.m in Sources */,
+				1849D77920AB3CBD008A3738 /* DoubanModel.m in Sources */,
+				18A746E720AC2D1F00594D26 /* ShowapiResBody.m in Sources */,
+				181565CC20ABD61F00FD32DF /* BaseTableViewController.m in Sources */,
+				18A7470320AC97F600594D26 /* GankPresenter.m in Sources */,
+				18A746E420AC2D0000594D26 /* TaoFemale.m in Sources */,
 				18386972208CB77B00809FA6 /* main.m in Sources */,
+				1849D78020AB3F3E008A3738 /* DoubanViewController.m in Sources */,
+				18A746DB20AC252B00594D26 /* HuabanViewController.m in Sources */,
+				18A746CE20AC221600594D26 /* HuabanPresenter.m in Sources */,
+				18A746ED20AC2D5800594D26 /* Contentlist.m in Sources */,
+				18A7474420ADD4C000594D26 /* DoubanPagerController.m in Sources */,
 				185E411E208E255F00E56ACD /* CardTableViewCell.m in Sources */,
 				185E4115208E17A800E56ACD /* GankGirlResult.m in Sources */,
 				185E410A208E0F0600E56ACD /* MainPresenter.m in Sources */,
+				18A7470020AC97BE00594D26 /* GankViewController.m in Sources */,
 				185E411B208E1B2100E56ACD /* GankGirlModel.m in Sources */,
+				18A746F020AC3D6E00594D26 /* TaoFemaleModel.m in Sources */,
+				18A746F620AC3E7A00594D26 /* TaoFemalePresenter.m in Sources */,
 				185E40FF208E0D9600E56ACD /* BasePresenter.m in Sources */,
 				185E40FC208E0A9500E56ACD /* BaseViewController.m in Sources */,
+				1849D77220AB3256008A3738 /* DoubanGirlBody.m in Sources */,
 				185E4107208E0EE600E56ACD /* MainViewController.m in Sources */,
+				18A746D820AC22C300594D26 /* HuabanResp.m in Sources */,
+				18A746D520AC228200594D26 /* HuabanGirlBody.m in Sources */,
+				18A746D120AC222F00594D26 /* HuabanModel.m in Sources */,
 				185E4121208E2AE200E56ACD /* NetRequst.m in Sources */,
+				18C750FB209360B8002B5CA1 /* WPickerInputView.m in Sources */,
 				185E4112208E173000E56ACD /* GankGirlBody.m in Sources */,
+				18A7474120ADCDEB00594D26 /* HuabanPagerController.m in Sources */,
 				18386964208CB77B00809FA6 /* AppDelegate.m in Sources */,
+				18A746F920AC3EED00594D26 /* TaoFemaleViewController.m in Sources */,
+				18A746EA20AC2D3600594D26 /* PageBean.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

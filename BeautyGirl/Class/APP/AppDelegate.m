@@ -8,9 +8,12 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import <MMDrawerController/MMDrawerController.h>
 #import <Firebase/Firebase.h>
-@interface AppDelegate ()
+#import "MenuViewController.h"
 
+@interface AppDelegate ()
+@property (strong,nonatomic) MMDrawerController *rootController;
 @end
 
 @implementation AppDelegate
@@ -24,9 +27,24 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    UIViewController *mainVC =  [[MainViewController alloc] init];
+
+    UIViewController *centerVC = [[MainViewController alloc]init];
+    UIViewController *leftVC = [[MenuViewController alloc]init];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainVC];;
+    UINavigationController *centerNvaVC = [[UINavigationController alloc]initWithRootViewController:centerVC];
+    UINavigationController *leftNvaVC = [[UINavigationController alloc]initWithRootViewController:leftVC];
+    
+    self.rootController = [[MMDrawerController alloc]initWithCenterViewController:centerNvaVC leftDrawerViewController:leftNvaVC rightDrawerViewController:nil];
+    
+    self.rootController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    self.rootController.closeDrawerGestureModeMask =MMCloseDrawerGestureModeAll;
+    //5、设置左右两边抽屉显示的多少
+    self.rootController.maximumLeftDrawerWidth = 200.0;
+    self.rootController.maximumRightDrawerWidth = 200.0;
+   
+    
+    
+    self.window.rootViewController = self.rootController;;
 
     [self.window makeKeyAndVisible];
     return YES;

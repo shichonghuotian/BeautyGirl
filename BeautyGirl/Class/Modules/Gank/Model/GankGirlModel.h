@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "GankGirlResult.h"
-#import "ApiManager.h"
+#import "BaseGirlModel.h"
 
-@interface GankGirlModel : NSObject
-@property(nonatomic, strong, readonly)RACCommand *requestCommand;
+@interface GankGirlModel : BaseGirlModel
+
 @property(assign, nonatomic) NSInteger page;
 @property(assign, nonatomic) NSInteger number;
 
