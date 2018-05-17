@@ -10,4 +10,7 @@
 
 @implementation HuabanGirlBody
 
+-(NSString *)url {
+    return self.thumb;
+}
 @end
